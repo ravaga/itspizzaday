@@ -89,6 +89,7 @@ function generatePizza(day, month, toppings = 1)
 //get toppings
 function getToppings()
 {
+    
     return [
         "pepperoni", 
         "sausage", 
@@ -107,6 +108,18 @@ function getToppings()
         "broccoli"
     ];
                 
+}
+
+function getToppingsAsOptions()
+{
+    var toppings = getToppings();  
+    var str = '';
+    for(var i=0; i< (toppings.length - 2); i++)
+    {                  
+        str += '<option value="'+ (i+2)  +'">'+ (i+2) +'</option>';    
+    }
+    
+    return str;
 }
 //Get Valid dates
 function getValidDates()
